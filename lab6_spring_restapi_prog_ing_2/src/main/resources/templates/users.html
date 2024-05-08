@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>users</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 40%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <thead>
+    <caption><b>Bus</b></caption>
+    <tr>
+        <th>Id</th>
+        <th>price</th>
+        <th>number_bus</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="bus : ${bus}">
+        <td th:text="${bus.id}"></td>
+        <td th:text="${bus.price}"></td>
+        <td th:text="${bus.number_bus}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

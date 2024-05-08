@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>admin</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 40%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <thead>
+    <caption><b>Client</b></caption>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="client : ${client}">
+        <td th:text="${client.id}"></td>
+        <td th:text="${client.name}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
